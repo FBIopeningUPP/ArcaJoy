@@ -24,7 +24,7 @@ Once GitHub Pages is on, the configurator is at **https://fbiopeningupp.github.i
 
 ## Map your buttons
 1. Open `index.html` → **Connect**.
-2. **Buttons** tab → **Map all in order**, press each real button when asked (or **Learn** one at a time).
+2. **Cabinet** tab → **Map all in order**, press each real button when asked (or click one control and press its button).
    **Pin finder** tab shows which pin lights up when you press something.
 3. Wiring: one leg of each button to its pin, the other to **GND**. Avoid pins 0 and 1.
 4. **Save to board**, then **Disconnect**.
