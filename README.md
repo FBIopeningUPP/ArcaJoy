@@ -4,23 +4,26 @@ Turn an **Arduino Mega 2560** into a customizable gamepad on Windows (up to 32 b
 
 ```
 MegaJoy/
-├─ configurator.html     Web page: map pins, calibrate, find pins, upload the sketch
+├─ index.html            Web page (also the GitHub Pages site): map pins, calibrate, find pins, upload the sketch
 ├─ sketch/               Arduino sketch (MegaJoy.ino) + compiled MegaJoy_sketch.hex
 ├─ bridge/               Python bridge: Mega serial -> vJoy (run_bridge.bat)
 ├─ vjoy/                 vJoy installer (v2.2.2.0, Win10/11) – from github.com/BrunnerInnovation/vJoy
 └─ optional_real_usb/    Optional: flash the USB chip so the Mega is a real gamepad (no bridge)
 ```
 
+## Use the configurator online
+Once GitHub Pages is on, the configurator is at **https://fbiopeningupp.github.io/ArcaJoy/** (open in Chrome or Edge; Web Serial needs https). You can also just open `index.html` from the folder.
+
 ## Setup (once)
 1. **vJoy:** run `vjoy/vJoySetup_v2.2.2.0_Win10_Win11.exe`, restart. Open *Configure vJoy* → Device 1:
    axes **X Y Z Rz**, **32 buttons**, **1 continuous POV hat** → **Apply**.
    (If buttons above 8 do nothing in Windows, the button count is still 8.)
 2. **Python:** install Python 3 (64-bit). `run_bridge.bat` installs `pyserial` for you.
-3. **Sketch:** open `configurator.html` in Chrome or Edge → **Upload to Mega** → Upload.
+3. **Sketch:** open `index.html` in Chrome or Edge → **Upload to Mega** → Upload.
    (Or Arduino IDE: open `sketch/MegaJoy/MegaJoy.ino`, board *Mega 2560*.)
 
 ## Map your buttons
-1. Open `configurator.html` → **Connect**.
+1. Open `index.html` → **Connect**.
 2. **Buttons** tab → **Map all in order**, press each real button when asked (or **Learn** one at a time).
    **Pin finder** tab shows which pin lights up when you press something.
 3. Wiring: one leg of each button to its pin, the other to **GND**. Avoid pins 0 and 1.
